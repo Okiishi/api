@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Histórico de Compras</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Ingresso</th>
+                <th>Quantidade</th>
+                <th>Preço Unitário</th>
+                <th>Total</th>
+                <th>Data da Compra</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#compras}}
+            <tr>
+                <td>{{ticket.nome}}</td>
+                <td>{{quantidade}}</td>
+                <td>R$ {{ticket.preco}}</td>
+                <td>R$ {{#multiplicar}}{{ticket.preco}}, {{quantidade}}{{/multiplicar}}</td>
+                <td>{{data}}</td>
+            </tr>
+            {{/compras}}
+        </tbody>
+    </table>
+</body>
+</html>
