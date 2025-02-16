@@ -66,26 +66,4 @@ O sistema implementa controle de permissões para garantir que:
 - **Mustache/Handlebars** (Templates para interface web)
 - **JWT (JSON Web Token)** para autenticação
 
----
 
-## Como Executar o Projeto
-1. Clone o repositório:
-   ```sh
-   git clone https://github.com/seu-usuario/sistema-venda-ingressos.git
-   ```
-2. Instale as dependências:
-   ```sh
-   cd sistema-venda-ingressos
-   npm install
-   ```
-3. Configure o banco de dados (Sequelize/Mongoose).
-4. Inicie o servidor:
-   ```sh
-   npm start
-   ```
-5. Acesse a aplicação via navegador ou API Client (Postman, Insomnia, etc.).
-
----
-
-## Contato
-Para dúvidas ou suporte, entre em contato com o professor ou abra uma issue no repositório.
